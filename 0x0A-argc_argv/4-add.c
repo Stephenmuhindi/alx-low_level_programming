@@ -3,8 +3,8 @@
 #include <ctype.h>
 #include <string.h>
 /**
- * check_num - check - string there are digit
- * @str: array str
+ * check_num - looks if the sting has numbers
+ * @str: string array
  * Return: Always 0 (Success)
  */
 int check_num(char *str)
@@ -26,9 +26,9 @@ int check_num(char *str)
 
 
 /**
- * main - Print the name of the program
- * @argc: Count arguments
- * @argv: Arguments
+ * main - outputs program name
+ * @argc: Arguments for count
+ * @argv: Arguments array
  * Return: Always 0 (Success)
  */
 

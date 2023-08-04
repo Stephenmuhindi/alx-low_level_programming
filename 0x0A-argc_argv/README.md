@@ -1,0 +1,1 @@
+0x0A. C - argc, argv,  use arguments passed to your program,two prototypes of main that you know of, and in which case do you use one or the other and use __attribute__((unused)) or (void) to compile functions with unused variables or parameters.

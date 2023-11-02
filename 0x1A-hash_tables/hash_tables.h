@@ -35,6 +35,39 @@ typedef struct hash_table_s
      hash_node_t **array;
 } hash_table_t;
 
+/**
+ * struct shash_node_s - hash table node
+ * @key: key str
+ * @value: value
+ * @next: next node pointer
+ * @sprev: previous pointer
+ * @snext: next pointer
+ */
+typedef struct shash_node_s
+{
+	char *key;
+	char *value;
+	struct shash_node_s *next;
+	struct shash_node_s *sprev;
+	struct shash_node_s *snext;
+} shash_node_t;
+
+/**
+ * struct shash_table_s - hash table that
+ * points to head and tail to avoid collission
+ * @size: size of [...]
+ * @array: array of size
+ * @shead: head pointer
+ * @stail: tail pointer
+ */
+typedef struct shash_table_s
+{
+	unsigned long int size;
+	shash_node_t **array;
+	shash_node_t *shead;
+	shash_node_t *stail;
+} shash_table_t;
+
 hash_table_t *hash_table_create(unsigned long int size);
 unsigned long int hash_djb2(const unsigned char *str);
 unsigned long int key_index(const unsigned char *key, unsigned long int size);

@@ -195,7 +195,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 /**
  * shash_table_get - get function
  * @ht: hash table
- * @key:  key 
+ * @key:  key
  * Return: n*value
  */
 char *shash_table_get(const shash_table_t *ht, const char *key)
